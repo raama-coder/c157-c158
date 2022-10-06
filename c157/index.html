@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Virtual tour</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+  <script src="tour.js"></script>
+  <script src="cursorEvent.js"></script>
+</head>
+
+<body>
+  <a-scene id="Main_scene">
+    <a-sky id="Main_container" color="#026F90"></a-sky>
+    <a-camera id="camera" wasd-control="enabled:false">
+      <a-entity id="placeContainer" tour cursor-listener></a-entity>
+      <a-entity id="app_title" position="0 1 -2"
+        text="font:exo2bold; align:center; color:black; width:10; value:It's time to travel virtually"></a-entity>
+      <a-entity id="app_subtitle" position="0 0.5 -2"
+        text="font:exo2bold; align:center; color:black; width:7; value:Travel around the world"></a-entity>
+    </a-camera>
+
+  </a-scene>
+</body>
+
+</html>
